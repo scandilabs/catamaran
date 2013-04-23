@@ -1,0 +1,10 @@
+com.scandilabs.catamaran.entity.support
+com.scandilabs.catamaran.mail.client
+com.scandilabs.catamaran.mail.compose.freemarker
+com.scandilabs.catamaran.mail.send
+com.scandilabs.catamaran.monitor.log
+com.scandilabs.catamaran.mvc
+com.scandilabs.catamaran.mvc.freemarker
+com.scandilabs.catamaran.pool
+com.scandilabs.catamaran.type
+com.scandilabs.catamaran.util
