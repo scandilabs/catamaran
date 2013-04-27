@@ -4,7 +4,7 @@
   <groupId>com.scandilabs</groupId>
   <artifactId>catamaran</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <name>Easy-to-use web framework based on Spring MVC, Hibernate, and Freemarker</name>
   <url>http://maven.apache.org</url>
 
@@ -41,7 +41,15 @@
         <groupId>servletapi</groupId>
         <artifactId>servletapi</artifactId>
         <version>2.4</version>
+        <scope>provided</scope>
     </dependency>
+    
+    <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>tomcat-catalina</artifactId>
+        <version>6.0.20</version>
+        <scope>provided</scope>
+    </dependency>    
 
 	<dependency>
       <groupId>net.sf.json-lib</groupId>
@@ -142,6 +150,16 @@
 		<artifactId>spring-context-support</artifactId>
 		<version>3.1.2.RELEASE</version>
 	</dependency>	
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>3.1.2.RELEASE</version>
+    </dependency>	
+    <dependency>
+        <groupId>cglib</groupId>
+        <artifactId>cglib</artifactId>
+        <version>2.2.2</version>
+    </dependency>
 	<!-- End: Spring Framework and required dependencies -->		
 	
   </dependencies>
