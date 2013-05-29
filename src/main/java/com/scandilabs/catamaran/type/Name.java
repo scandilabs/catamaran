@@ -51,10 +51,11 @@ public class Name {
     }
 
     /**
-     * Builds a Name object from a full name like "first last" or "last, first"
+     * Builds a {@link Name} from a full name like "first last" or "last, first"
      * 
-     * @param fullName
-     * @return
+     * @param fullName the full name
+     * @return a {@link Name} corresponding to the full name, or
+     * <code>null</code> if fullName is <code>null</code>
      */
     public static Name createFromFullNameString(String fullName) {
 

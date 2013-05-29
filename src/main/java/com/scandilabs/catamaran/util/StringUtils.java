@@ -40,8 +40,8 @@ public final class StringUtils {
 	
 	/**
 	 * Turns a camel-case string like ThisIsATest into a dash-separated string, like this-is-a-test
-	 * @param stringList
-	 * @return
+	 * @param s a camel-case string
+	 * @return a dash-separated string
 	 */
 	public static String camelCaseToDashSeparatedString(String s) {
 		List<String> parts = splitOnCaps(s);
@@ -50,8 +50,8 @@ public final class StringUtils {
 	
 	/**
 	 * Turns a camel-case string like ThisIsATest into a list of strings like [this,is,a,test]
-	 * @param s
-	 * @return
+	 * @param s a camel-case string
+	 * @return a list of strings
 	 */
 	public static List<String> splitOnCaps(String s) {		
 		List<String> results = new ArrayList<String>();
@@ -65,8 +65,8 @@ public final class StringUtils {
 	
 	/**
 	 * Turns a list of strings into a dash-separated string, like [this,is,a,test] to this-is-a-test
-	 * @param stringList
-	 * @return
+	 * @param stringList a list of strings
+	 * @return a dash-separated string
 	 */
 	public static String toDashSeparatedString(List<String> stringList) {
 		
@@ -89,10 +89,10 @@ public final class StringUtils {
 	}
 	
 	/**
-	 * Converts spaces to hyphens and then removes ant remaining special characters from the string
+	 * Converts spaces to hyphens and then removes any remaining special characters from the string
 	 * (anything non alpha-numeric, except hypen, underscore, parentheses.)
-	 * @param s
-	 * @return
+	 * @param s a string that potentially contains special characters
+	 * @return the input string without special characters
 	 */
 	public static String removeSpecialCharacters(String s) {
 		// Change spaces to hyphens

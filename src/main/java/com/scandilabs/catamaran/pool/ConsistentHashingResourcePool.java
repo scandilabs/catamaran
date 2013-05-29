@@ -9,11 +9,10 @@ import com.scandilabs.catamaran.util.NumberUtils;
  * A pool of resources. The location of each resource is determined by computing
  * a pseudo hashcode for a string key, then matching that hashcode with a bucket.
  * 
- * We are using the 24 least significant bits of a MD5 hash to compute the pseudo hashcode. @see NumberUtils.stringToUnsignedIntegerCode for details.
+ * Scandilabs uses the 24 least significant bits of a MD5 hash to compute the pseudo hashcode.
  * 
- * @see http
- *      ://www.tomkleinpeter.com/2008/03/17/programmers-toolbox-part-3-consistent
- *      -hashing/
+ * @see NumberUtils#stringToUnsignedIntegerCode(String)
+ * @see <a href="http://www.tomkleinpeter.com/2008/03/17/programmers-toolbox-part-3-consistent-hashing/">Consistent hashing</a>
  *      
  * @author mkvalsvik
  * 

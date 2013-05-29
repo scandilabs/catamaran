@@ -38,9 +38,10 @@ public class ThreadLocalUtils {
 	}
 	
 	/**
-	 * Get the value of the key set from the {@link ThreadLocal} instance
-	 * @param key
-	 * @return
+	 * Get the value of the key set from the {@link ThreadLocal} instance.
+	 * 
+	 * @param key the key of the desired value
+	 * @return the desired value
 	 */
 	public static Object get(String key) {
 		if(threadLocal.get()==null){

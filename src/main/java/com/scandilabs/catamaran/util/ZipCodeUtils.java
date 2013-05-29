@@ -9,7 +9,7 @@ public final class ZipCodeUtils {
      * between longitudes becomes shorter when you move away from the equator)
      * but since this service filters the results anyway it should work ok.
      * 
-     * @see http://en.wikipedia.org/wiki/Longitude#Degree_length
+     * @see <a href="http://en.wikipedia.org/wiki/Longitude#Length_of_a_degree_of_longitude">Degree length</a>
      */
     public static final double MILES_PER_ARC_DEGREE = 69;
     

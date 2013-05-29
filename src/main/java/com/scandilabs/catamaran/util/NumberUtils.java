@@ -20,8 +20,8 @@ public class NumberUtils {
      * least significant bits of a MD5 hash. The generated long value is not
      * suitable as a hash because it is not guaranteed to be unique.
      * 
-     * @param s
-     * @return
+     * @param s the string to convert
+     * @return a long value
      */
     public static long stringToLongCode(String s) {
         String md5 = DigestUtils.md5Hex(s);
@@ -33,8 +33,8 @@ public class NumberUtils {
     
     /**
      * Converts a string to an evenly distributed unsigned 30-bit integer in the range 0 to 2^30
-     * @param s
-     * @return
+     * @param s the string to convert
+     * @return an int value
      * @throws DecoderException 
      */
     public static int stringToUnsignedIntegerCode(String s) {

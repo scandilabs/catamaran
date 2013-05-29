@@ -37,8 +37,7 @@ public class CommonFieldValidations {
      * Checks whether <code>number</code> is a valid an properly formatted US
      * phone number. Does not ensure that the area code is an existing one.
      * 
-     * @param number
-     *            the phone number to check.
+     * @param number the phone number to check.
      * @return true if <code>number</code> is in a valid format, false if not.
      */
     public static boolean isValidPhoneNumber(String number) {
@@ -50,8 +49,9 @@ public class CommonFieldValidations {
     /**
      * Matches: 12345, 12345-1234 Fails: 12345-12345
      * 
-     * @param zip
-     * @return
+     * @param zip the zip code to check for validity
+     * @return <code>true</code> if the given zip code is
+     * valid, and <code>false</code> otherwise
      */
     public static boolean isValidZipCode(String zip) {
         Matcher matcher = ZIP_CODE.matcher(zip);
@@ -77,8 +77,9 @@ public class CommonFieldValidations {
      * Checks whether <code>name</code> is properly formatted for a company
      * short name (First char alphanumeric. All others alphanumeric or dash)
      * 
-     * @param name
-     * @return
+     * @param name a company short name
+     * @return <code>true</code> if the given short name is
+     * valid, and <code>false</code> otherwise
      */
     public static boolean isValidCompanyShortName(String name) {
         Matcher matcher = COMPANY_SHORTNAME_PATTERN.matcher(name);

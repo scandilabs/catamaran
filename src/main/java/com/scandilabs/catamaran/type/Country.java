@@ -3,7 +3,7 @@ package com.scandilabs.catamaran.type;
 import java.util.regex.Pattern;
 
 /**
- * @see http://www.unc.edu/~rowlett/units/codes/country.htm
+ * @see <a href="http://www.unc.edu/~rowlett/units/codes/country.htm">Country codes</a>
  * @author mkvalsvik
  *
  */

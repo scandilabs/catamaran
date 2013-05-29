@@ -76,11 +76,13 @@ public class CollectionUtils {
 
 	/**
 	 * Check if the property values of an object match those property name/value
-	 * pairs in criteria
+	 * pairs in criteria.
 	 * 
-	 * @param o
-	 * @param criteria
-	 * @return
+	 * @param o the object whose properties will be inspected
+	 * @param criteria a {@link Map} of properties/values
+	 * @return <code>true</code> if all properties in the criteria match
+	 * corresponding properties in the given object, and <code>false</code>
+	 * otherwise
 	 */
 	public static boolean match(Object o, Map criteria) {
 		Iterator it = criteria.keySet().iterator();
@@ -166,14 +168,18 @@ public class CollectionUtils {
 	}
 
 	/**
-	 * Build a List from the entry set of a map NOTE: This should not be
-	 * necessary but there are bugs when you iterate using
-	 * map.entrySet().iterator()
+	 * Build a List from the entry set of a map.
 	 * 
-	 * @param map
-	 * @param sorted
-	 *            - sorty by value (entry)
-	 * @return
+	 *  <p>
+	 * NOTE: This should not be necessary but there are bugs
+	 * when you iterate using map.entrySet().iterator().
+	 * </p>
+	 * 
+	 * @param map the map to use as the source
+	 * @param sortedByValue whether or not to sort the values
+	 * of the created list
+	 * @return a list containing all values of the given
+	 * map
 	 */
 	public static List mapToEntryList(Map map, boolean sortedByValue) {
 		List retList = new ArrayList();
@@ -194,14 +200,17 @@ public class CollectionUtils {
 	}
 
 	/**
-	 * Build a List from the entry set of a map NOTE: This should not be
-	 * necessary but there are bugs when you iterate using
-	 * map.entrySet().iterator()
+	 * Build a List from the entry set of a map that is
+	 * sorted by the keys of the map.
 	 * 
-	 * @param map
-	 * @param sorted
-	 *            - sorty by keys
-	 * @return
+	 *  <p>
+	 * NOTE: This should not be necessary but there are bugs
+	 * when you iterate using map.entrySet().iterator().
+	 * </p>
+	 * 
+	 * @param map the map to use as the source
+	 * @return a list containing all values of the given
+	 * map
 	 */
 	public static List mapToEntryListSortedByKeys(Map map) {
 		List retList = new ArrayList();
@@ -223,8 +232,8 @@ public class CollectionUtils {
 	/**
 	 * Convert a collection of beans to a collection of maps
 	 * 
-	 * @param beans
-	 * @return
+	 * @param beans the beans to convert
+	 * @return a collection of maps
 	 */
 	public Collection beansToMaps(Collection beans) {
 		List maps = new ArrayList();
@@ -261,10 +270,12 @@ public class CollectionUtils {
 	}
 
 	/**
-	 * Build a List from the key set of a map
+	 * Build a List from the key set of a bidirectional map.
 	 * 
-	 * @param map
-	 * @return
+	 * @param map the {@link BidiMap} whose keyset will make up the list
+	 * @param sortedByValues whether to sort the returned list by values
+	 * or keys
+	 * @return a list of keys
 	 */
 	public static List mapToKeyList(BidiMap map, boolean sortedByValues) {
 		if (!sortedByValues) {
@@ -306,7 +317,7 @@ public class CollectionUtils {
 		}
 	}
 
-	/**
+	/*
 	 * Search a collection for a PersistentObject by the given ID
 	 * 
 	 * @param coll
@@ -321,12 +332,12 @@ public class CollectionUtils {
 	 */
 
 	/**
-	 * Subtract objects in b from collection a. Uses the string value of the
-	 * objects for comparison
+	 * Subtract objects in collection b from collection a. The string value
+	 * of the object is used for comparisons.
 	 * 
-	 * @param a
-	 * @param b
-	 * @return
+	 * @param a a collection that will have members removed
+	 * @param b a collection whose objects will be removed from a
+	 * @return a new collection that contains the remaining objects in a
 	 */
 	public static Collection subtractByString(Collection a, Collection b) {
 		Collection retColl = new ArrayList();
@@ -341,7 +352,7 @@ public class CollectionUtils {
 		return retColl;
 	}
 
-	/**
+	/*
 	 * Subtract objects in b from collection a. Uses the id property of
 	 * PersistentObjects for comparison.
 	 * 

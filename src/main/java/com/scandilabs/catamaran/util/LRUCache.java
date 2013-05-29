@@ -54,8 +54,9 @@ public class LRUCache<T, E> {
     /**
      * Returns matching object unless it has expired
      * 
-     * @param key
-     * @return
+     * @param key the key for the requested object
+     * @return the object or <code>null</code> if the
+     * cache doesn't contain it
      */
     public E get(T key) {
         this.removeAllExpired();

@@ -1,12 +1,8 @@
 package com.scandilabs.catamaran.util;
 
-import java.util.Collection;
-import java.util.Iterator;
 
 /**
- * Utilities related to arrays
- * 
- * @see http://commons.apache.org/lang/api-2.5/org/apache/commons/lang/ArrayUtils.html 
+ * Utilities related to arrays 
  */
 public class ArrayUtils {
     
@@ -29,9 +25,10 @@ public class ArrayUtils {
     
     /**
      * Converts an array into a character-delimited string
-     * @param arr
-     * @param delim
-     * @return
+     * @param arr the array to convert
+     * @param delim the delimiter to use in the resultant string
+     * @return the delimited string, or <code>null</code> if
+     * the given array is null.
      */
     public static String toString(Object[] arr, String delim) {
         if (arr == null) {
