@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Order;
@@ -118,5 +119,23 @@ public class EntityFinder {
 	public <T> T get(Long id) {
 		return (T) PersistableUtils.getPersistentEntity(this.sessionFactory, clazz, id);
 	}
+	
+	/**
+	 * Make sessionFactory available to subclasses so that they can implement their own complex queries
+	 * @return
+	 */
+	protected SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	/**
+	 * Convenience method for use by subclasses that implement their own queries
+	 * @return
+	 */
+	protected Session getSession() {
+		Session session = PersistableUtils.getHibernateSession(getSessionFactory());
+		return session;
+	}
+
 	
 }
