@@ -4,7 +4,7 @@
   <groupId>com.scandilabs</groupId>
   <artifactId>catamaran</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <name>Easy-to-use web framework based on Spring MVC, Hibernate, and Freemarker</name>
   <url>http://maven.apache.org</url>
 
@@ -31,11 +31,11 @@
 		<version>2.3.16</version>
 	</dependency>
 	
-	<dependency>
-		<groupId>javax.mail</groupId>
-		<artifactId>mail</artifactId>
-		<version>1.4</version>
-	</dependency>
+    <dependency>
+        <groupId>com.sun.mail</groupId>
+        <artifactId>javax.mail</artifactId>
+        <version>1.5.1</version>
+    </dependency>
 
     <dependency>
         <groupId>servletapi</groupId>
