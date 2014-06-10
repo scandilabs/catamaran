@@ -16,24 +16,19 @@ public abstract class IdentifiableBase implements Identifiable {
     }
 
     public boolean equals(Object obj) {
-
-        if (null == obj)
-            return false;
-
-        // Note: Removed this because it fails to identify two identical objects
-        // if one of them is enhanced by cglib
-        /*
-         * if( !obj.getClass().getName().equals( getClass().getName())) return
-         * false;
-         */
+    	if(this == obj) {
+    		return true;
+    	}
+        if (null == obj  || null == getId()) {
+        	return false;
+        }
 
         // Right type of object?
         if (!(obj instanceof IdentifiableBase)) {
             return false;
         }
 
-        return 0 != getId() ? getId() == ((IdentifiableBase) obj).getId()
-                : 0 == ((IdentifiableBase) obj).getId();
+        return getId().equals(((IdentifiableBase) obj).getId());
     }
 
     public int compareTo(Object obj) {
