@@ -4,7 +4,7 @@
   <groupId>com.scandilabs</groupId>
   <artifactId>catamaran</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <name>Easy-to-use web framework based on Spring MVC, Hibernate, and Freemarker</name>
   <url>http://maven.apache.org</url>
 
