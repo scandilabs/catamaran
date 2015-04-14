@@ -4,7 +4,7 @@
   <groupId>com.scandilabs</groupId>
   <artifactId>catamaran</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <name>Easy-to-use web framework based on Spring MVC, Hibernate, and Freemarker</name>
   <url>http://maven.apache.org</url>
 
@@ -15,7 +15,7 @@
       <id>maven.scandilabs</id>
       <url>ftp://maven.scandilabs.com/www/maven/repository</url>
     </repository>
-  </distributionManagement>
+  </distributionManagement>  
   
   <dependencies>  	
 	<dependency>
@@ -133,27 +133,27 @@
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-core</artifactId>
-		<version>3.1.2.RELEASE</version>
+		<version>${spring.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-orm</artifactId>
-		<version>3.1.2.RELEASE</version>
+		<version>${spring.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-webmvc</artifactId>
-		<version>3.1.2.RELEASE</version>
+		<version>${spring.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-context-support</artifactId>
-		<version>3.1.2.RELEASE</version>
+		<version>${spring.version}</version>
 	</dependency>	
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-test</artifactId>
-        <version>3.1.2.RELEASE</version>
+        <version>${spring.version}</version>
     </dependency>	
     <dependency>
         <groupId>cglib</groupId>
@@ -166,6 +166,7 @@
 
   <properties>
     <github.global.server>github</github.global.server>
+    <spring.version>4.1.6.RELEASE</spring.version>
   </properties>
 
   <build>
