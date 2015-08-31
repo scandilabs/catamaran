@@ -4,7 +4,7 @@
   <groupId>com.scandilabs</groupId>
   <artifactId>catamaran</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <name>Easy-to-use web framework based on Spring MVC, Hibernate, and Freemarker</name>
   <url>http://maven.apache.org</url>
 
@@ -125,7 +125,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.6</version>
+      <version>5.1.36</version>
     </dependency>
 	<!-- end hibernate -->
 	
